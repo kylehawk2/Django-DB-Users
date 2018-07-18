@@ -1,0 +1,23 @@
+1. Retrieve all Users:
+    User.objects.all()
+
+2. Retrieve last User:
+    User.objects.last()
+
+3. Create a few records in the users:
+    User.objects.create(first_name="Kyle", last_name="Hawkins", email="kyle@hawkins.com", age="28")
+    User.objects.create(first_name="Danica", last_name="Tomber", email="danica@tomber.com", age="28")
+
+4. Retrieve first User:
+    User.objects.first()
+
+5. Retrieve Users sorted by first name:
+    User.objects.order_by("first_name)
+
+6. Retrieve record and update last name:
+    new = User.objects.get(id=2)
+    new.last_name="Hawkins"
+    new.save
+
+7. Delete a record:
+    User.object.get(id=2).delete()
